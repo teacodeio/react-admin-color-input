@@ -62,6 +62,7 @@ class ColorInputComponent extends React.Component {
       input,
       resource,
       isRequired,
+      helperText,
     } = this.props;
 
     const Picker = ReactColor[`${picker}Picker`];
@@ -81,7 +82,7 @@ class ColorInputComponent extends React.Component {
             />
           }
           error={!!(touched && error)}
-          helperText={touched && error}
+          helperText={helperText}
           className={className}
         />
         {
